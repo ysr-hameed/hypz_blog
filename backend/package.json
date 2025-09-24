@@ -1,0 +1,29 @@
+{
+  "name": "collage-api",
+  "version": "1.0.0",
+  "description": "Collage Rest API for Tier 3 Cities",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "dev": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ysr-hameed/collage-api.git"
+  },
+  "author": "Yasir Hameed",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ysr-hameed/collage-api/issues"
+  },
+  "homepage": "https://github.com/ysr-hameed/collage-api#readme",
+  "dependencies": {
+    "bcryptjs": "^3.0.2",
+    "dotenv": "^17.2.2",
+    "express": "^5.1.0",
+    "pg": "^8.16.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}
