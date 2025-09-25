@@ -1,22 +1,18 @@
-// app.js
 import express from "express";
-import config from "./config/config.js";
 import { defaultRouter } from "./default/defaultRouter.js";
-import userRouter from "./users/usersRouter.js"
+import userRouter from "./users/usersRouter.js";
 import { generateBlogRouter } from "./generateBlog/generateBlogRouter.js";
 
 const app = express();
 
-// Middleware (if any)
+// Middleware
 app.use(express.json());
 
-// Add routers here
+// Routers
+app.use("/api/users", userRouter);           // User related routes
+app.use("/api/blog", generateBlogRouter);    // Blog / AI generation routes
 
-app.use("/api/", userRouter); 
-app.use("/api/", generateBlogRouter)
+// Default catch-all route (last)
+app.use("/api", defaultRouter);
 
-// Routes Default add this in last
-app.use("/api/", defaultRouter);
-
-// Export app so server.js can use it
 export default app;
