@@ -16,13 +16,12 @@ const test_db_Return = {
   success: true,
   message: "Database Connected Successfully!"
 };
-  defaultRouter.get("/", (req, res)=>{
-    return res.status(200).json(defaultReturn)
+
+
+
+defaultRouter.get("/", (req, res)=>{
+  return res.status(200).json(defaultReturn)
   })
-  
-  
-  
-  
 
 defaultRouter.use((err,req,res,next) =>{
     return res.status(404).json(missingReturn)
